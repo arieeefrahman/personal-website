@@ -12,7 +12,7 @@ import { SiRuby, SiTailwindcss, SiNextdotjs, SiSequelize } from 'react-icons/si'
 const about = {
   title: 'About Me',
   description: 'A brief overview of my professional background, skills, and interests.',
-  info: [
+  items: [
     {
       fieldName: 'Name',
       fieldValue: 'Arief Rahman',
@@ -66,6 +66,30 @@ const educations = {
       duration: 'Aug 2022 - Dec 2022',
       url: 'https://academy.alterra.id/',
     },
+  ],
+}
+
+const courses = {
+  title: 'Courses',
+  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  items: [
+    
+  ],
+}
+
+const projects = {
+  title: 'Projects',
+  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  items: [
+    
+  ],
+}
+
+const certificates = {
+  title: 'Certificates',
+  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  items: [
+    
   ],
 }
 
@@ -170,6 +194,18 @@ const skills = {
   ]
 }
 
+const honors = {
+  title: 'Honors and Awards',
+  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  items: [
+    {
+      name: 'Bank Indonesia Scholarship 2023 Awardee',
+      duration: 'June 2023 - June 2024',
+      institution: 'Bank Indonesia'
+    }
+  ],
+}
+
 const organizations = {
   title: 'Organizations',
   description: 'Affiliations and organizations I have been a part of.',
@@ -192,6 +228,13 @@ const organizations = {
   ],
 }
 
+const volunteering = {
+  title: 'Volunteering',
+  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  items: [
+    
+  ],
+}
 
 const Resume = () => {
   return (
@@ -212,21 +255,53 @@ const Resume = () => {
           defaultValue='about'
           className='flex flex-col xl:flex-row gap-[60px]'
         >
-          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
-            <TabsTrigger value='about'>About Me</TabsTrigger>
-            <TabsTrigger value='experience'>Experiences</TabsTrigger>
-            <TabsTrigger value='education'>Educations</TabsTrigger>
-            <TabsTrigger value='skill'>Skills and Interests</TabsTrigger>
-            <TabsTrigger value='organization'>Organizations</TabsTrigger>
-          </TabsList>
+          <ScrollArea className="h-[250px] xl:h-[440px] w-full max-w-[380px] mx-auto xl:mx-0"> {/* Adjust the height as needed */}
+            <TabsList className='flex flex-col gap-6'>
+              <TabsTrigger value='about'>About Me</TabsTrigger>
+              <TabsTrigger value='experience'>Experiences</TabsTrigger>
+              <TabsTrigger value='education'>Educations</TabsTrigger>
+              {/* <TabsTrigger value='course'>Courses</TabsTrigger> */}
+              <TabsTrigger value='project'>Projects</TabsTrigger>
+              <TabsTrigger value='certificate'>Certificates</TabsTrigger>
+              <TabsTrigger value='skill'>Skills and Interests</TabsTrigger>
+              <TabsTrigger value='honor'>Honors and Awards</TabsTrigger>
+              <TabsTrigger value='organization'>Organizations</TabsTrigger>
+              <TabsTrigger value='volunteering'>Volunteering</TabsTrigger>
+
+            </TabsList>
+          </ScrollArea>
 
           <div className="min-h-[70vh] w-full">
+            {/* About Me Content */}
+            <TabsContent value="about" className="w-full">
+              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                <h3 className='text-4xl font-bold'>{about.title}</h3>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
+                <ScrollArea className='h-[300px]'>
+                  <ul className='grid gap-[20px]'>
+                      {about.items.map((item, idx) => {
+                        return (
+                          <li 
+                            key={idx}
+                            className=' rounded-xl flex flex-row items-center gap-1'
+                          >
+                            <p className='text-accent text-xl w-40'>{item.fieldName} </p>
+                            <p className='text-xl max-w-[360px] min-h-[30px] text-center lg:text-left'>: {item.fieldValue}</p>
+                          </li>
+                        );
+                      })}
+                  </ul>
+                </ ScrollArea>
+                    
+              </div>
+            </TabsContent>
+
             {/* Experience Content */}
             <TabsContent value="experience" className="w-full">
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>{experiences.title}</h3>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{experiences.description}</p>
-                <ScrollArea className='h-[400px]'>
+                <ScrollArea className='h-[300px]'>
                   <ul className='grid grid-cols-1  gap-[30px]'>
                     {experiences.items.map((item, idx) => {
                       return (
@@ -272,6 +347,33 @@ const Resume = () => {
                     })}
                   </ul>
                 </ScrollArea>
+              </div>
+            </TabsContent>
+
+            {/* Courses Content */}
+            <TabsContent value="course" className="w-full">
+              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                <h3 className='text-4xl font-bold'>{courses.title}</h3>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{courses.description}</p>
+                
+              </div>
+            </TabsContent>
+
+            {/* Projects Content */}
+            <TabsContent value="project" className="w-full">
+              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                <h3 className='text-4xl font-bold'>{projects.title}</h3>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{projects.description}</p>
+                
+              </div>
+            </TabsContent>
+
+            {/* Certificates Content */}
+            <TabsContent value="certificate" className="w-full">
+              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                <h3 className='text-4xl font-bold'>{certificates.title}</h3>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{certificates.description}</p>
+                
               </div>
             </TabsContent>
 
@@ -381,12 +483,30 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/* About Me Content */}
-            <TabsContent value="about" className="w-full">
+            {/* Honors and Awards */}
+            <TabsContent value="honor" className="w-full">
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
-                <h3 className='text-4xl font-bold'>{about.title}</h3>
-                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
-                
+                <h3 className='text-4xl font-bold'>{honors.title}</h3>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{honors.description}</p>
+                <ScrollArea className='h-[300px]'>
+                  <ul className='grid grid-cols-1  gap-[30px]'>
+                    {honors.items.map((item, idx) => {
+                      return (
+                        <li 
+                          key={idx}
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                        >
+                          <span className='text-accent'>{item.duration}</span>
+                          <h3 className='text-xl max-w-[480px] min-h-[30px] text-center lg:text-left'>{item.name}</h3>
+                          <div className='flex items-center gap-3'>
+                            <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
+                            <a href={item.url} target='_blank' className='text-white/60'>{item.institution}</a>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
 
@@ -395,7 +515,7 @@ const Resume = () => {
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>{organizations.title}</h3>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{organizations.description}</p>
-                <ScrollArea className='h-[400px]'>
+                <ScrollArea className='h-[300px]'>
                   <ul className='grid xl:grid-cols-1 grid-cols-2  gap-[30px]'>
                     {organizations.items.map((item, idx) => {
                       return (
@@ -416,6 +536,15 @@ const Resume = () => {
                     })}
                   </ul>
                 </ScrollArea>
+              </div>
+            </TabsContent>
+
+            {/* Volunteering Content */}
+            <TabsContent value="volunteering" className="w-full">
+              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                <h3 className='text-4xl font-bold'>{volunteering.title}</h3>
+                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{volunteering.description}</p>
+                
               </div>
             </TabsContent>
           </div>
