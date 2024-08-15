@@ -5,13 +5,13 @@ import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3, FaJs, FaPhp, FaPython, FaReact, FaLaravel } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaJs, FaPhp, FaPython, FaReact, FaLaravel, FaExternalLinkAlt } from 'react-icons/fa';
 import { FaGolang } from 'react-icons/fa6';
 import { SiRuby, SiTailwindcss, SiNextdotjs, SiSequelize } from 'react-icons/si';
 
 const about = {
   title: 'About Me',
-  description: 'A brief overview of my professional background, skills, and interests.',
+  description: 'An overview of my personal details.',
   items: [
     {
       fieldName: 'Name',
@@ -25,15 +25,19 @@ const about = {
       fieldName: 'Languages',
       fieldValue: 'Bahasa Indonesia, English',
     },
+    {
+      fieldName: 'Phone',
+      fieldValue: '0812 6128 9587'
+    },
   ]
 }
 
 const experiences = {
   title: 'Experiences',
-  description: 'Detailed account of my experiences and roles held.',
+  description: 'Overview of my experiences and roles held.',
   items: [
     {
-      company: 'PT Lentera Bangsa Benderang (BINAR Academy)',
+      company: 'BINAR Academy',
       position: 'Backend Engineer Intern',
       duration: 'Aug 2023 - Dec 2023',
       url: 'https://www.binaracademy.com/',
@@ -52,7 +56,7 @@ const experiences = {
 
 const educations = {
   title: 'Educations',
-  description: 'Academic qualifications and certifications acquired over the years.',
+  description: 'Academic qualifications and certifications acquired.',
   items: [
     {
       institution: 'Universitas Gadjah Mada',
@@ -71,7 +75,7 @@ const educations = {
 
 const courses = {
   title: 'Courses',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  description: 'A list of courses I have taken.',
   items: [
     
   ],
@@ -79,7 +83,7 @@ const courses = {
 
 const projects = {
   title: 'Projects',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  description: '',
   items: [
     
   ],
@@ -87,15 +91,24 @@ const projects = {
 
 const certificates = {
   title: 'Certificates',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  description: 'A collection of my earned certificates.',
   items: [
-    
+    {
+      name: 'Backend Engineer Intern',
+      org: 'BINAR Academy',
+      url: 'https://drive.google.com/file/d/13TLZ34qurvA_5_6sxeNFzW9r8_Tw13HZ/view?usp=drive_link',
+    },
+    {
+      name: 'Golang Backend Engineer',
+      org: 'Alterra Academy',
+      url: 'https://drive.google.com/file/d/1unY3MY8X4jnDfJIAAAD3oGa6Dy-MvOZW/view',
+    },
   ],
 }
 
 const skills = {
   title: 'Skills and Interests',
-  description: 'An overview of my technical skills, frameworks, languages, and interests.',
+  description: 'An overview of my technical skills, languages, and interests.',
   programming_languages: [
     {
       title: 'Programming Languages',
@@ -196,7 +209,7 @@ const skills = {
 
 const honors = {
   title: 'Honors and Awards',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  description: 'Recognition of achievements and excellence.',
   items: [
     {
       name: 'Bank Indonesia Scholarship 2023 Awardee',
@@ -230,9 +243,28 @@ const organizations = {
 
 const volunteering = {
   title: 'Volunteering',
-  description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, amet!',
+  description: 'Experiences contributing to community and social causes.',
   items: [
-    
+    {
+      position: 'Event Staff',
+      org: 'Dekan CUP FMIPA UGM',
+      duration: 'Aug 2021 - Oct 2021',
+      job_detailed: [
+        'Prepared and organized the e-sport competition.',
+        'Assisted in finding and working with casters who provided commentary and analysis on streaming.',
+        'Coordinated with the technical team to ensure that the streaming was broadcasted.'
+      ]
+    },
+    {
+      position: 'Event Staff',
+      org: 'Jogja Information Technology Session (JOINTS) 2021',
+      duration: 'Nov 2020 - Apr 2021',
+      job_detailed: [
+        'Established event session called JOINTSCamp, an IT bootcamp open for public with a total duration of one month with a weekly class schedule to introduce, prepare, and develop participants skills for the IT industry with various coursework and training.',
+        'Formed fundamental concepts of JOINTSCamp and Data Science with the collaborations with Dicoding, Moka, and DQlab as the primary sponsor that provides the course.',
+        'Succeed on finding and maintaining relationships mentors from various unicorn companies and IT educational platforms in Indonesia, namely Gojek, tiket.com, Bukalapak, Dicoding, Web Programming UNPAS, and more.'
+      ]
+    },
   ],
 }
 
@@ -255,13 +287,12 @@ const Resume = () => {
           defaultValue='about'
           className='flex flex-col xl:flex-row gap-[60px]'
         >
-          <ScrollArea className="h-[250px] xl:h-[440px] w-full max-w-[380px] mx-auto xl:mx-0"> {/* Adjust the height as needed */}
+          <ScrollArea className="h-[250px] xl:h-[440px] w-full max-w-[380px] mx-auto xl:mx-0">
             <TabsList className='flex flex-col gap-6'>
               <TabsTrigger value='about'>About Me</TabsTrigger>
               <TabsTrigger value='experience'>Experiences</TabsTrigger>
               <TabsTrigger value='education'>Educations</TabsTrigger>
               {/* <TabsTrigger value='course'>Courses</TabsTrigger> */}
-              <TabsTrigger value='project'>Projects</TabsTrigger>
               <TabsTrigger value='certificate'>Certificates</TabsTrigger>
               <TabsTrigger value='skill'>Skills and Interests</TabsTrigger>
               <TabsTrigger value='honor'>Honors and Awards</TabsTrigger>
@@ -285,8 +316,8 @@ const Resume = () => {
                             key={idx}
                             className=' rounded-xl flex flex-row items-center gap-1'
                           >
-                            <p className='text-accent text-xl w-40'>{item.fieldName} </p>
-                            <p className='text-xl max-w-[360px] min-h-[30px] text-center lg:text-left'>: {item.fieldValue}</p>
+                            <p className='text-accent text-left text-sm md:text-lg w-[75px] md:w-[100px] xl:w-40'>{item.fieldName} </p>
+                            <p className='text-sm md:text-lg xl:max-w-[360px] xl:min-h-[30px] text-left lg:text-left'>: {item.fieldValue}</p>
                           </li>
                         );
                       })}
@@ -359,21 +390,34 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/* Projects Content */}
-            <TabsContent value="project" className="w-full">
-              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
-                <h3 className='text-4xl font-bold'>{projects.title}</h3>
-                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{projects.description}</p>
-                
-              </div>
-            </TabsContent>
-
             {/* Certificates Content */}
             <TabsContent value="certificate" className="w-full">
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>{certificates.title}</h3>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{certificates.description}</p>
-                
+                <ScrollArea className='h-[300px]'>
+                  <ul className='grid grid-cols-1  gap-[30px]'>
+                    {certificates.items.map((item, idx) => {
+                      return (
+                        <li 
+                          key={idx}
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                        >
+                          <h3 className='text-xl max-w-[360px] min-h-[30px] text-center lg:text-left'>{item.name}</h3>
+                          <div className='flex items-center gap-3'>
+                            <span className='w-[8px] h-[6px] rounded-full bg-accent'></span>
+                            <p>Issued by : </p>
+                            <a href={item.url} target='_blank' className='text-white/60'>{item.org}</a>
+                          </div>
+                          <div className='flex justify-center items-center gap-3 text-accent'>
+                            <p className='text-sm w-[8px] h-[6px]'> <FaExternalLinkAlt /> </p>
+                            <a href={item.url} target='_blank' className='h-[23px]'>See the certificate </a>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
 
@@ -544,7 +588,25 @@ const Resume = () => {
               <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                 <h3 className='text-4xl font-bold'>{volunteering.title}</h3>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{volunteering.description}</p>
-                
+                <ScrollArea className='h-[300px]'>
+                  <ul className='grid grid-cols-1  gap-[30px]'>
+                    {volunteering.items.map((item, idx) => {
+                      return (
+                        <li 
+                          key={idx}
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                        >
+                          <span className='text-accent'>{item.duration}</span>
+                          <h3 className='text-xl max-w-[360px] min-h-[30px] text-center lg:text-left'>{item.position}</h3>
+                          <div className='flex items-center gap-3'>
+                            <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
+                            <a href={item.url} target='_blank' className='text-white/60'>{item.org}</a>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
           </div>

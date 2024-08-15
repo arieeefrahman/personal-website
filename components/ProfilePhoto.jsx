@@ -30,7 +30,9 @@ const ProfilePhoto = () => {
                     className="w-[228px] h-[228px] xl:w-[428px] xl:h-[428px] mix-blend-lighten"
                 >
                     <Image 
-                        src={'/assets/profile-photo-cropped.png'} 
+                        // src={'/assets/profile-photo-cropped.png'}
+                        src={'/assets/foto-binar.jpeg'} 
+
                         priority 
                         quality={100} 
                         fill 
