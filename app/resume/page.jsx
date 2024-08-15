@@ -338,12 +338,12 @@ const Resume = () => {
                       return (
                         <li 
                           key={idx}
-                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col gap-1'
                         >
-                          <span className='text-accent'>{item.duration}</span>
-                          <h3 className='text-xl max-w-[360px] min-h-[30px] text-center lg:text-left'>{item.position}</h3>
-                          <div className='flex items-center gap-3'>
-                            <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
+                          <span className='text-accent text-left'>{item.duration}</span>
+                          <h3 className='text-xl max-w-[360px] min-h-[30px] text-left'>{item.position}</h3>
+                          <div className='flex gap-3'>
+                            {/* <span className='w-[6px] h-[6px] rounded-full bg-accent'></span> */}
                             <a href={item.url} target='_blank' className='text-white/60'>{item.company}</a>
                           </div>
                         </li>
@@ -365,13 +365,13 @@ const Resume = () => {
                       return (
                         <li 
                           key={idx}
-                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col gap-1'
                         >
-                          <span className='text-accent xl:w-[300px]'>{item.duration}</span>
-                          <h3 className='text-xl max-w-[560px] min-h-[60px] text-center lg:text-left'>{item.degree}</h3>
-                          <div className='flex items-center gap-3'>
-                            <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
-                            <a href={item.url} target='_blank' className='text-white/60'>{item.institution}</a>
+                          <span className='text-accent xl:w-[300px] text-left'>{item.duration}</span>
+                          <h3 className='text-xl max-w-[560px] min-h-[60px] text-left'>{item.degree}</h3>
+                          <div className='flex gap-3'>
+                            {/* <span className='w-[6px] h-[6px] rounded-full bg-accent'></span> */}
+                            <a href={item.url} target='_blank' className='text-white/60 text-left'>{item.institution}</a>
                           </div>
                         </li>
                       );
@@ -401,15 +401,18 @@ const Resume = () => {
                       return (
                         <li 
                           key={idx}
-                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col gap-1'
                         >
-                          <h3 className='text-xl max-w-[360px] min-h-[30px] text-center lg:text-left'>{item.name}</h3>
-                          <div className='flex items-center gap-3'>
+                          <h3 className='text-xl max-w-[360px] min-h-[30px] text-left'>{item.name}</h3>
+                          <div className='gap-3'>
                             <span className='w-[8px] h-[6px] rounded-full bg-accent'></span>
-                            <p>Issued by : </p>
-                            <a href={item.url} target='_blank' className='text-white/60'>{item.org}</a>
+                            <p className='text-left'>
+                              Issued by : 
+                              <a href={item.url} target='_blank' className='text-white/60'> {item.org}</a> 
+                            </p>
+                            
                           </div>
-                          <div className='flex justify-center items-center gap-3 text-accent'>
+                          <div className='flex items-center gap-3 text-accent'>
                             <p className='text-sm w-[8px] h-[6px]'> <FaExternalLinkAlt /> </p>
                             <a href={item.url} target='_blank' className='h-[23px]'>See the certificate </a>
                           </div>
@@ -538,13 +541,13 @@ const Resume = () => {
                       return (
                         <li 
                           key={idx}
-                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col gap-1'
                         >
-                          <span className='text-accent'>{item.duration}</span>
-                          <h3 className='text-xl max-w-[480px] min-h-[30px] text-center lg:text-left'>{item.name}</h3>
-                          <div className='flex items-center gap-3'>
+                          <span className='text-accent text-left'>{item.duration}</span>
+                          <h3 className='text-xl max-w-[480px] min-h-[30px] text-left'>{item.name}</h3>
+                          <div className='gap-3'>
                             <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
-                            <a href={item.url} target='_blank' className='text-white/60'>{item.institution}</a>
+                            <a href={item.url} target='_blank' className='text-white/60 flex text-left'>{item.institution}</a>
                           </div>
                         </li>
                       );
@@ -560,20 +563,22 @@ const Resume = () => {
                 <h3 className='text-4xl font-bold'>{organizations.title}</h3>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{organizations.description}</p>
                 <ScrollArea className='h-[300px]'>
-                  <ul className='grid xl:grid-cols-1 grid-cols-2  gap-[30px]'>
+                  <ul className='grid grid-cols-1  gap-[30px]'>
                     {organizations.items.map((item, idx) => {
                       return (
                         <li 
                           key={idx}
-                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-start gap-1'
                         >
                           <span className='text-accent'>{item.duration}</span>
-                          <h3 className='text-xl max-w-[560px] min-h-[30px] text-center lg:text-left'>{item.position}</h3>
-                          <div className='flex items-center gap-3'>
-                            <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
+                          <h3 className='text-xl max-w-[560px] min-h-[30px] text-left'>{item.position}</h3>
+                          <div className=' gap-3'>
+                            {/* <span className='w-[6px] h-[6px] rounded-full bg-accent'></span> */}
                             <p className='text-white/60'>{item.institution}</p>
                           </div>
-                          {/* <p className='max-w-[400px] hidden xl:visible xl:max-w-[600px] text-center lg:text-left'>{item.description}</p> */}
+
+                            <p className='pt-5 font-bold'>Responsibilities : </p>
+                            <p className='max-w-[400px] xl:max-w-[600px] text-white/60 text-justify'>{item.description}</p>
 
                         </li>
                       );
@@ -594,14 +599,22 @@ const Resume = () => {
                       return (
                         <li 
                           key={idx}
-                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'
+                          className='bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-start gap-1'
                         >
                           <span className='text-accent'>{item.duration}</span>
                           <h3 className='text-xl max-w-[360px] min-h-[30px] text-center lg:text-left'>{item.position}</h3>
-                          <div className='flex items-center gap-3'>
-                            <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
-                            <a href={item.url} target='_blank' className='text-white/60'>{item.org}</a>
+                          <div className='gap-3'>
+                            {/* <span className='w-[6px] h-[6px] rounded-full bg-accent'></span> */}
+                            <p className='text-white/60 max-h-[800px] max-w-[200px] text-left '>{item.org}</p>
                           </div>
+                          <p className='pt-5 font-bold'>Responsibilities : </p>
+                          <ul className='list-disc ml-[15px] text-left'>
+                            {item.job_detailed.map((detail, detailIdx) => (
+                              <li key={detailIdx} className='text-white/80'>
+                                <p className='ml-1 text-justify'>{detail}</p>
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                       );
                     })}
