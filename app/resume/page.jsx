@@ -81,14 +81,6 @@ const courses = {
   ],
 }
 
-const projects = {
-  title: 'Projects',
-  description: '',
-  items: [
-    
-  ],
-}
-
 const certificates = {
   title: 'Certificates',
   description: 'A collection of my earned certificates.',
@@ -214,7 +206,12 @@ const honors = {
     {
       name: 'Bank Indonesia Scholarship 2023 Awardee',
       duration: 'June 2023 - June 2024',
-      institution: 'Bank Indonesia'
+      institution: 'Bank Indonesia',
+      description: 'Receiving a highly esteemed scholarship from Bank Indonesia, ' + 
+                   'covering a duration of 2 semesters, and actively engaging in ' + 
+                   'exclusive events hosted by Bank Indonesia Regional Daerah Istimewa ' + 
+                   'Yogyakarta (DIY) and the esteemed Generasi Baru Indonesia (GenBI) ' + 
+                   'Regional DIY network.',
     }
   ],
 }
@@ -249,7 +246,7 @@ const volunteering = {
       position: 'Event Staff',
       org: 'Dekan CUP FMIPA UGM',
       duration: 'Aug 2021 - Oct 2021',
-      job_detailed: [
+      responsibilities: [
         'Prepared and organized the e-sport competition.',
         'Assisted in finding and working with casters who provided commentary and analysis on streaming.',
         'Coordinated with the technical team to ensure that the streaming was broadcasted.'
@@ -259,12 +256,12 @@ const volunteering = {
       position: 'Event Staff',
       org: 'Jogja Information Technology Session (JOINTS) 2021',
       duration: 'Nov 2020 - Apr 2021',
-      job_detailed: [
-        'Established event session called JOINTSCamp, an IT bootcamp open for public with a total duration of one month with a weekly class schedule to introduce, prepare, and develop participants skills for the IT industry with various coursework and training.',
-        'Formed fundamental concepts of JOINTSCamp and Data Science with the collaborations with Dicoding, Moka, and DQlab as the primary sponsor that provides the course.',
-        'Succeed on finding and maintaining relationships mentors from various unicorn companies and IT educational platforms in Indonesia, namely Gojek, tiket.com, Bukalapak, Dicoding, Web Programming UNPAS, and more.'
+      responsibilities: [
+        'Organized JOINTSCamp, a public IT bootcamp with weekly classes for one month to develop participants’ skills in the IT industry.',
+        'Defined JOINTSCamp concepts and collaborated with sponsors like Dicoding, Moka, and DQlab to provide coursework.',
+        'Built relationships with mentors from major Indonesian unicorns like Gojek, Bukalapak, and IT platforms such as Dicoding and Web Programming UNPAS.'
       ]
-    },
+    },    
   ],
 }
 
@@ -558,6 +555,10 @@ const Resume = () => {
                             <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
                             <a href={item.url} target='_blank' className='text-white/60 flex text-left'>{item.institution}</a>
                           </div>
+
+                          <p className='pt-5 font-bold text-left'>Description : </p>
+                          <p className='max-w-[400px] xl:max-w-[600px] text-white/60 text-justify'>{item.description}</p>
+
                         </li>
                       );
                     })}
@@ -586,8 +587,8 @@ const Resume = () => {
                             <p className='text-white/60'>{item.institution}</p>
                           </div>
 
-                            <p className='pt-5 font-bold'>Responsibilities : </p>
-                            <p className='max-w-[400px] xl:max-w-[600px] text-white/60 text-justify'>{item.description}</p>
+                          <p className='pt-5 font-bold'>Responsibilities : </p>
+                          <p className='max-w-[400px] xl:max-w-[600px] text-white/60 text-justify'>{item.description}</p>
 
                         </li>
                       );
@@ -614,11 +615,11 @@ const Resume = () => {
                           <h3 className='text-xl max-w-[360px] min-h-[30px] text-center lg:text-left'>{item.position}</h3>
                           <div className='gap-3'>
                             {/* <span className='w-[6px] h-[6px] rounded-full bg-accent'></span> */}
-                            <p className='text-white/60 max-h-[800px] max-w-[200px] text-left '>{item.org}</p>
+                            <p className='text-white/60 max-h-[800px] max-w-[600px] text-left'>{item.org}</p>
                           </div>
                           <p className='pt-5 font-bold'>Responsibilities : </p>
                           <ul className='list-disc ml-[15px] text-left'>
-                            {item.job_detailed.map((detail, detailIdx) => (
+                            {item.responsibilities.map((detail, detailIdx) => (
                               <li key={detailIdx} className='text-white/80'>
                                 <p className='ml-1 text-justify'>{detail}</p>
                               </li>
