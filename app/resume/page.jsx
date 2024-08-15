@@ -346,6 +346,15 @@ const Resume = () => {
                             {/* <span className='w-[6px] h-[6px] rounded-full bg-accent'></span> */}
                             <a href={item.url} target='_blank' className='text-white/60'>{item.company}</a>
                           </div>
+
+                          <p className='pt-5 font-bold'>Responsibilities : </p>
+                          <ul className='list-disc ml-[15px] text-left'>
+                            {item.responsibilities.map((detail, detailIdx) => (
+                              <li key={detailIdx} className='text-white/80'>
+                                <p className='ml-1 text-justify'>{detail}</p>
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                       );
                     })}
