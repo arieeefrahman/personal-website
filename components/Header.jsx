@@ -17,9 +17,9 @@ const Header = () => {
                 {/* Navigation bar : desktop */}
                 <div className="hidden xl:flex items-center gap-8">
                     <Navbar />
-                    {/* <Link href={'/contact'}>
-                        <Button>Hire me</Button>
-                    </Link> */}
+                    <Link href={'/about'}>
+                        <Button className='rounded-xl px-4 font-bold'>About Me</Button>
+                    </Link>
                 </div>
 
                 {/* Navigation bar : mobile */}
