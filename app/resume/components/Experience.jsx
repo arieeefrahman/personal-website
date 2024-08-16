@@ -43,8 +43,8 @@ const Experience = () => (
                         <p className='pt-5 font-bold text-left'>Responsibilities : </p>
                         <ul className='list-disc ml-[15px] text-left'>
                             {item.responsibilities.map((detail, detailIdx) => (
-                                <li key={detailIdx} className='text-white/80'>
-                                <p className='ml-1 text-justify'>{detail}</p>
+                                <li key={detailIdx} className='text-white/60'>
+                                <p className='ml-1 max-w-[400px] xl:max-w-[600px] text-justify text-white/60'>{detail}</p>
                                 </li>
                             ))}
                         </ul>
