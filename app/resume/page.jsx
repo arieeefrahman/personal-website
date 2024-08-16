@@ -22,12 +22,20 @@ const about = {
       fieldValue: 'arieeefrahman@gmail.com',
     },
     {
+      fieldName: 'Phone',
+      fieldValue: '0812 6128 9587'
+    },
+    {
       fieldName: 'Languages',
       fieldValue: 'Bahasa Indonesia, English',
     },
     {
-      fieldName: 'Phone',
-      fieldValue: '0812 6128 9587'
+      fieldName: 'Domicile',
+      fieldValue: 'Yogyakarta, Indonesia'
+    },
+    {
+      fieldName: 'Nationality',
+      fieldValue: 'Indonesian'
     },
   ]
 }
@@ -272,7 +280,7 @@ const Resume = () => {
       animate={{
         opacity: 1,
         transition: {
-          delay: 2.4,
+          delay: 1.2,
           duration: 0.4,
           ease: 'easeIn',
         }
@@ -344,7 +352,7 @@ const Resume = () => {
                             <a href={item.url} target='_blank' className='text-white/60'>{item.company}</a>
                           </div>
 
-                          <p className='pt-5 font-bold'>Responsibilities : </p>
+                          <p className='pt-5 font-bold text-left'>Responsibilities : </p>
                           <ul className='list-disc ml-[15px] text-left'>
                             {item.responsibilities.map((detail, detailIdx) => (
                               <li key={detailIdx} className='text-white/80'>
