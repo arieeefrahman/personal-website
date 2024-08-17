@@ -21,7 +21,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      primary: "var(--font-jetBrainsMono)",
+      courgette   : "var(--font-courgette)",
     },
     extend: {
       keyframes: {
