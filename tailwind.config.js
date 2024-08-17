@@ -21,6 +21,7 @@ module.exports = {
       },
     },
     fontFamily: {
+      jetBrainsMono: "var(--font-jetBrainsMono)",
       courgette   : "var(--font-courgette)",
     },
     extend: {

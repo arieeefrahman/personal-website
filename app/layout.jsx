@@ -1,4 +1,4 @@
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Courgette } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
@@ -25,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={jetBrainsMono.variable}>
+      <body className={`${jetBrainsMono.variable} ${courgette.variable}`}>
         <Header />
         {/* <StairTransition /> */}
         <PageTransition>{children}</PageTransition>

@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply font-primary bg-primary text-white leading-loose;
+        @apply font-jetBrainsMono bg-primary text-white leading-loose;
     }
     .h1 {
         @apply text-[38px] xl:text-[58px] leading-[1.1] font-semibold;
