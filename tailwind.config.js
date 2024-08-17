@@ -24,6 +24,9 @@ module.exports = {
       jetBrainsMono: "var(--font-jetBrainsMono)",
       courgette   : "var(--font-courgette)",
     },
+    letterSpacing: {
+      custom: '0.35em',
+    },
     extend: {
       keyframes: {
         "accordion-down": {
