@@ -1,8 +1,9 @@
 import ProfilePhoto from "@/components/ProfilePhoto"
 import Social from "@/components/Social"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { FiDownload } from "react-icons/fi"
+import { BsArrowUpRight } from 'react-icons/bs'
+
 
 const Home = () => {
   return (
@@ -11,10 +12,10 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row justify-between items-center xl:py-20">
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-lg">Software Developer | Computer Science Student</span>
-            <h1 className="h1 xl:my-2">
-              Hi there! I am <br /> <span className="text-accent h1">Arief Rahman</span> 
+            <h1 className="h1 xl:my-2 text-accent py-7">
+              Arief Rahman
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] mb-9 text-white/80 xl:text-justify">
             I am highly dedicated to software development, with a strong focus on backend development. 
             I usually build the backend with Go and am versatile with other programming languages.
             </p>
@@ -24,14 +25,13 @@ const Home = () => {
               <Button asChild
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-3"
+                className="uppercase flex items-center gap-3 px-5"
               >
                 <Link 
-                  href={"https://drive.google.com/file/d/1OsLlTAQjUZNvFf2g2NihH5xrhitK-rYp/view?usp=sharing"} 
-                  target="_blank"
+                  href={"/resume"} 
                 >
-                  <FiDownload className="text-xl" />
-                  <span>Download CV</span>
+                  <BsArrowUpRight className="text-xl font-extrabold" />
+                  <span>Check My Resume</span>
                 </Link>
               </Button>
               <div className="mb-8 xl:mb-0">
