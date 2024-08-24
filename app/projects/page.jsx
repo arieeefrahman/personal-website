@@ -193,7 +193,10 @@ const Projects = () => {
 							<div className='flex items-center gap-4'>
 								{/* Live Demo */}
 								{project.live_demo ? (
-									<Link href={project.live_demo}>
+									<Link
+										href={project.live_demo}
+										target='_blank'
+									>
 										<TooltipProvider delayDuration={100}>
 											<Tooltip>
 												<TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
@@ -209,7 +212,10 @@ const Projects = () => {
 
 								{/* PPT Document */}
 								{project.document ? (
-									<Link href={project.document}>
+									<Link 
+										href={project.document} 
+										target='_blank'
+									>
 										<TooltipProvider delayDuration={100}>
 											<Tooltip>
 												<TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
@@ -226,7 +232,10 @@ const Projects = () => {
 								
 								{/* GitHub */}
 								{project.github ? (
-									<Link href={project.github}>
+									<Link
+										href={project.github}
+										target='_blank'
+									>
 										<TooltipProvider delayDuration={100}>
 											<Tooltip>
 												<TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
@@ -242,7 +251,10 @@ const Projects = () => {
 
 								{/* API Documentation */}
 								{project.api_doc ? (
-									<Link href={project.api_doc}>
+									<Link 
+										href={project.api_doc}
+										target='_blank'
+									>
 										<TooltipProvider delayDuration={100}>
 											<Tooltip>
 												<TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
@@ -258,7 +270,10 @@ const Projects = () => {
 
 								{/* Figma */}
 								{project.figma_url ? (
-									<Link href={project.figma_url}>
+									<Link 
+										href={project.figma_url}
+										target='_blank'
+									>
 										<TooltipProvider delayDuration={100}>
 											<Tooltip>
 												<TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
@@ -316,15 +331,15 @@ const Projects = () => {
 				</div>
 			</div>
 			<AnimatePresence>
-    {modalOpen && (
-        <ImageModal
-            isOpen={modalOpen}
-            onClose={() => setModalOpen(false)}
-            imageSrc={modalImage.src}
-            imageAlt={modalImage.alt}
-        />
-    )}
-</AnimatePresence>
+				{modalOpen && (
+					<ImageModal
+						isOpen={modalOpen}
+						onClose={() => setModalOpen(false)}
+						imageSrc={modalImage.src}
+						imageAlt={modalImage.alt}
+					/>
+				)}
+			</AnimatePresence>
 		</motion.section>
 	);
 }
