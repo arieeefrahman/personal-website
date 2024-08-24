@@ -22,7 +22,7 @@ module.exports = {
     },
     fontFamily: {
       jetBrainsMono: "var(--font-jetBrainsMono)",
-      courgette   : "var(--font-courgette)",
+      audiowide   : "var(--font-audiowide)",
     },
     letterSpacing: {
       custom: '0.35em',

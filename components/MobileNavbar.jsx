@@ -38,8 +38,10 @@ const MobileNavbar = () => {
             <SheetContent className="flex flex-col">
                 <div className="mt-32 mb-40 text-center text-2xl">
                     <Link href={'/'}>
-                        <h1 className="text-4xl font-semibold font-courgette tracking-widest">
-                            Arief <span className="text-accent">.</span>
+                        <h1 className="text-4xl font-semibold font-audiowide tracking-custom uppercase flex justify-center items-baseline">
+                            <span className="block text-6xl md:hidden">A</span>
+                            <span className="hidden md:block">Arief</span>
+                            <span className="text-accent text-8xl">.</span>
                         </h1>
                     </Link>
                 </div>
