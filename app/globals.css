@@ -182,3 +182,12 @@
 /*
 -- Start BackGround Animation 
 */
+
+
+.text-outline {
+    -webkit-text-stroke: 1px #FFA823;
+}
+
+.text-outline-hover {
+    -webkit-text-stroke: 1px #FFD35A;
+}
