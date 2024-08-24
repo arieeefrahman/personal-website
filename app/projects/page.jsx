@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Separator } from '@/components/ui/separator';
 
 import 'swiper/css'
-import { BsArrowUpRight, BsGithub, BsFiletypePpt, BsX } from 'react-icons/bs'
+import { BsGithub, BsFiletypePpt, BsX } from 'react-icons/bs'
 import { FaFigma } from "react-icons/fa";
 import { SiPostman } from "react-icons/si";
 import { IoIosRocket } from "react-icons/io";
@@ -107,48 +107,6 @@ const Projects = () => {
         setModalOpen(true);
     };
 
-	// const ProjectDescription = ({ description }) => {
-	// 	const [isExpanded, setIsExpanded] = useState(false);
-	// 	const [isOverflowing, setIsOverflowing] = useState(false);
-	// 	const descriptionRef = useRef(null);
-	  
-	// 	useEffect(() => {
-	// 	  const element = descriptionRef.current;
-	// 	  if (element) {
-	// 		// Check if content is overflowing on XL screens
-	// 		const isOverflown = element.scrollHeight > element.clientHeight;
-	// 		setIsOverflowing(isOverflown);
-	// 	  }
-	// 	}, [description]);
-	  
-	// 	return (
-	// 	  <div className="flex flex-col">
-	// 		<div
-	// 		  ref={descriptionRef}
-	// 		  className={`relative ${isExpanded ? '' : 'xl:h-[90px] xl:overflow-hidden'}`}
-	// 		>
-	// 		  <p className="text-white/60 text-justify">
-	// 			{description}
-	// 		  </p>
-	// 		  {!isExpanded && isOverflowing && (
-	// 			<div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-background to-transparent xl:hidden" />
-	// 		  )}
-	// 		</div>
-	// 		{/* Button only shows on XL screens and when content is overflowing */}
-	// 		{isOverflowing && (
-	// 		  <div className="hidden xl:block">
-	// 			<Button
-	// 			  variant="link"
-	// 			  className="mt-2 text-accent hover:text-accent-hover self-start p-0"
-	// 			  onClick={() => setIsExpanded(!isExpanded)}
-	// 			>
-	// 			  {isExpanded ? 'Show Less' : 'Show More'}
-	// 			</Button>
-	// 		  </div>
-	// 		)}
-	// 	  </div>
-	// 	);
-	//   };
 	const ProjectDescription = ({ description }) => {
 		const [isExpanded, setIsExpanded] = useState(false);
 		const [isOverflowing, setIsOverflowing] = useState(false);
