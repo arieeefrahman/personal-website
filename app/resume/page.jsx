@@ -4,14 +4,14 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { motion } from 'framer-motion';
 
-import AboutMe from './components/AboutMe';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Certificate from './components/Certificate';
-import Skill from './components/Skill';
-import Honor from './components/Honor';
-import Organization from './components/Organization';
-import Volunteering from './components/Volunteering';
+import AboutMe from '../../components/resume/AboutMe';
+import Experience from '../../components/resume/Experience';
+import Education from '../../components/resume/Education';
+import Certificate from '../../components/resume/Certificate';
+import Skill from '../../components/resume/Skill';
+import Honor from '../../components/resume/Honor';
+import Organization from '../../components/resume/Organization';
+import Volunteering from '../../components/resume/Volunteering';
 
 const courses = {
   title: 'Courses',
