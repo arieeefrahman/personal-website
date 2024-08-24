@@ -214,13 +214,13 @@ const Projects = () => {
 								{project.num}
 							</div>
 							{/* project title */}
-							<h2 className="text-[36px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+							<h2 className="text-[28px] xl:text-[36px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
 								{project.title}
 							</h2>
 							{/* project description */}
 							<ProjectDescription description={project.description} />
 							{/* stack */}
-							<ul className='flex gap-4'>
+							<ul className='flex flex-wrap gap-4'>
 								{project.stack.map((item, idx) => {
 									return (
 										<li key={idx} className='text-xl text-accent'>
