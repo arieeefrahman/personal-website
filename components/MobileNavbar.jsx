@@ -32,12 +32,12 @@ const MobileNavbar = () => {
     const pathName = usePathname();
     return (
         <Sheet>
-            <SheetTrigger className="flex justify-center items-center">
+            <SheetTrigger className="flex justify-center items-center" aria-label="Open Menu">
                 <CiMenuFries className="text-[32px] text-accent" />
             </SheetTrigger>
             <SheetContent className="flex flex-col">
                 <div className="mt-32 mb-40 text-center text-2xl">
-                    <Link href={'/'}>
+                    <Link href={'/'} aria-label="Home">
                         <h1 className="text-4xl font-semibold font-audiowide tracking-custom uppercase flex justify-center items-baseline">
                             <span className="block text-6xl md:hidden">A</span>
                             <span className="hidden md:block">Arief</span>
@@ -52,6 +52,7 @@ const MobileNavbar = () => {
                                 href={link.path}
                                 key={idx} 
                                 className={`${link.path === pathName && "text-accent border-b-2 border-accent"} capitalize text-xl hover:text-accent transition-all`}
+                                aria-label={link.name}
                             >
                                 {link.name}
                             </Link>
@@ -63,4 +64,4 @@ const MobileNavbar = () => {
     )
 }
 
-export default MobileNavbar
+export default MobileNavbar;
