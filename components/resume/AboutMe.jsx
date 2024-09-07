@@ -14,11 +14,11 @@ const about = {
         },
         {
             fieldName: 'Phone',
-            fieldValue: '0812 6128 9587'
+            fieldValue: '+6281261289587'
         },
         {
             fieldName: 'Languages',
-            fieldValue: 'Bahasa Indonesia, English',
+            fieldValue: 'English, Bahasa Indonesia',
         },
         {
             fieldName: 'Domicile',
@@ -42,7 +42,7 @@ const AboutMe = () => (
                     key={idx}
                     className='rounded-xl flex flex-row items-center gap-1'
                 >
-                    <p className='text-accent text-left text-sm md:text-lg w-[75px] md:w-[100px] xl:w-40'>{item.fieldName}</p>
+                    <p className='text-accent text-left text-sm md:text-lg w-[100px] md:w-[140px] xl:w-44'>{item.fieldName}</p>
                     <p className='text-sm md:text-lg xl:max-w-[360px] xl:min-h-[30px] text-left lg:text-left'>: {item.fieldValue}</p>
                 </li>
                 ))}
