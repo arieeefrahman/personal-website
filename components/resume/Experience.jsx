@@ -9,7 +9,7 @@ const experiences = {
             position: 'Backend Developer Intern',
             duration: 'Aug 2024 - Present',
             url: 'https://cmlabs.co/en-id',
-            place: 'Malang, East Java · (Remote)',
+            place: 'Malang, East Java · Remote',
             responsibilities: [
                 'Perform application optimization for maximum speed and scalability.',
                 'Implement clean and secure code.',
